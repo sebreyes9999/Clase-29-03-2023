@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*Acomoda el tamaño de la caja segun el ancho y alto*/
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    position: relative;
+    top: 0;
+    font-family: "Lora", serif;
+    font-size: 14px;
+}
+/************************Header********************/
+.header{
+    background-color: #ffeeee;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 2px 3px #ffd1dc;
+    z-index: 2;
+}
+
+.header .container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 100;
+}
+
+.header .logo{
+    color: #ffeeee;
+    text-align: center;
+    padding: 0.5%;
+    flex-grow: 1;
+}
+
+.logo img{
+    width: 150px;
+    margin: 0 auto;
+}
+
+.header .menu{
+    text-align: center;
+    padding: 0.8%;
+    flex-grow: 8;
+}
+
+.header .buscador{
+    text-align: center;
+    padding: 0.5%;
+    flex-grow: 1;
+    list-style: none;
+}
+
+.item > li{
+    display: inline-block;
+    padding: 0% 2%;
+    list-style: none;
+    font-size: 18px;
+}
+
+.item > li a{
+    color: black;
+    text-decoration: none;
+}
+
+.item > li :hover{
+    color:#4b4949;
+    font-size: 19px;
+    text-shadow: #ffd1dc 2px 3px;
+}
+
+.buscarOculto{
+    padding: 0;
+    width: 0;
+    border: none;
+    outline: none;
+    transition: all 0.5s linear;
+}
+
+.buscarVisible{
+    width: auto;
+    margin-right: 10px;
+    border-radius: 8%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    transition: all 0.5s linear;
+}
+/************************Principal Landing Page********************/
+.main h1{
+    width: 40%;
+    padding: 1%;
+    font-size: 55px;
+    font-weight: 600;
+    margin-top: 1%;
+}
+
+.main > .container_p{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;/*Escala la imagen pero sin estirarla*/
+    background-attachment: fixed;
+    background-position: center;
+    padding: 0.1px;
+    overflow-y: scroll;
+    background-image: linear-gradient(50deg, #c3bebec0 10%, #ffd1dca1),url(../images/accessory-gf35d02501_1280.jpg);
+}
+
+.main .container_p .offert{
+    width: 90%;
+    font-size: 24px;
+    padding: 1.5%;
+    text-align: justify;
+}
+
+.container_button{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.container_button .button_lp {
+    padding: 20px;
+    background-color: #4b4949;
+    border: 1px solid #4b4949;
+    border-radius: 5%;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    /*
+    Propiedades que quiero transicionar
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: ease;
+    transition-delay: 1s; -esto más la duration sera sera el total qeu se demore la transición
+    */
+
+    transition: all 1s ease 0.2s;
+}
+.container_button .button_lp .button_send .button_clear:hover{
+    background-color: #ff004e;
+    border: 1px solid #ff004e;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+/**********Contenedores***********/
+.containers{
+    padding: 2%;
+    margin-top: 2%;
+}
+.up{
+    width: 10%;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    padding: 20px;
+    background-color: #ffd1dc;
+    border: 1px solid #ffd1dc;
+    border-radius: 5%;
+    color: #4b4949;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    float: right;
+}
+
+.up:hover{
+    background-color: #4b4949;
+    border: 1px solid #4b4949;
+    color: #ffffff;
+    cursor: pointer;
+}
+.subTitle{
+    font-size: 34px;
+    color: #4b4949;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ff004e;
+}
+/**********Historia***************/
+.container_history .text_history{
+    font-size: 20px;
+}
+
+.service > i {
+    font-size: 60px;    
+}
+    
+.service .subService {
+    margin-top: 3%;    
+    margin-bottom: 2%;    
+    color: #ff004e;    
+    font-size: 24px;   
+}
+    
+.service {
+    width: 33%;    
+    height: auto;    
+    display: inline-block;   
+    text-align: center;    
+    padding: 10px;    
+}
+    
+.service > p {
+    font-size: 20px;    
+}
+
+/*****************Precio******************/
+
+.card_body > li {
+    display: inline-block;
+    width: 30%;
+    list-style: none;
+    border: 1px solid #ff004e;
+}
+
+.list-group > #code {
+    font-size: 20px;
+    padding: 2%;
+}
+
+.list-group > #detail {
+    font-size: 18px;
+    padding: 1%;
+    font-style: oblique;
+}
+
+/*Acerca de*/
+.elemets_contac {
+    margin: 0; 
+    padding: 0;   
+    width: 100%;    
+    height: auto;    
+    text-align: center;    
+    position: relative;  
+}
+    
+iframe {  
+    width: 50%;
+    margin-left: 2%;
+    height: 400px;
+    border: 1px solid #4b4949;  
+}
+       
+.container_acercade { 
+    font-size: 20px;
+    margin-bottom: 2%; 
+}
+/****************Formulario***********/
+.form {
+    width: 40%; 
+    height: auto;   
+    display: inline-block;   
+    padding: 20px 5px;   
+    text-align: center;   
+    border: 1px solid #4b4949;   
+}
+    
+.form * {   
+    display: inline-block;   
+    width: 85%;   
+    margin: 1% 0;   
+    font-size: 20px;   
+}
+    
+.form > h3 {  
+    font-size: 24px;   
+}
+    
+.form > input {   
+    padding: 10px 2px;   
+    border: none;   
+    border-bottom: 1px solid #ff004e;   
+    outline: none;   
+}
+    
+.form > label {  
+    text-align: left;   
+    padding: 5px;   
+}
+
+/****************Checkbox************/
+input[type="checkbox"]{
+    visibility: hidden;
+}
+
+.labelPolitica{
+    width: 50%;
+    display: inline-block;
+}
+
+.check{
+    display: inline-block;
+    position: relative;
+    margin: 3%;
+    width: 24%;
+    height: 40px;
+    background: #ff004e;
+    border-radius: 10px;
+}
+
+.check label{
+    display: block;
+    width: 45%;
+    height: 70%;
+    border-radius: 14px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.35);
+    background: #ffd1dc;
+    background: linear-gradient(to top, #fcfff4 3%, #d9d8d2 40%, #b3bead 100%);
+    cursor: pointer;
+    /*Posición*/
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    /*Comportamiento*/
+    transition: all 1.5s ease;
+}
+
+input[type="checkbox"]:checked + label{
+    left: auto;
+    right: 8px;
+}
+
+.check:after{
+    content: 'NO';
+    color: #ffd1dc;
+    margin: 2.5%;
+    position: absolute;
+    right: 10px;
+    z-index: 0;
+    font-size: 8px Arial;
+    font-weight: bold;
+}
+
+.check:before{
+    content: 'SI';
+    font-size: 8px Arial;
+    color: #ffd1dc;
+    margin: 2.5%;
+    position: absolute;
+    left: 10px;
+    z-index: 0;
+    font-weight: bold;
+}
+
+.button_send,
+.button_clear {
+    display: inline;
+    width: 30%;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    padding: 4%;
+    background-color: #ffd1dc;
+    border: 1px solid #ffd1dc;
+    border-radius: 5%;
+    color: #4b4949;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+/****************Footer*************/
+    
+.footer { 
+    width: 100%;
+    background: #4b4949;
+    color: #ffffff;
+    margin-top: 1%;
+    overflow-x: auto; 
+}
+    
+.footer .container_footer {
+    padding-top: 2%;
+    text-align: center; 
+    margin: 2%;  
+}
+       
+.container_footer > h2 {
+    color: #ffffff;  
+}
+    
+.container_footer > p {
+    font-size: 18px;   
+}
+      
+.container_footer .social_net {
+    list-style: none;
+    text-align: center;
+    
+}
+    
+.social_net > li {
+    display: inline-block;
+    padding: 2%;  
+}
+    
+.nets { 
+    width: 40px;   
+}
+
+
